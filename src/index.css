@@ -133,12 +133,8 @@ input{
 .form__field:placeholder-shown ~ .form__label {
   font-size: 1.3rem;
   cursor: text;
-  top: 200px;
-  left: 560px;
 }
 .form__label {
-  position: absolute;
-  top: 0;
   display: block;
   transition: 0.2s;
   font-size: 1rem;
@@ -153,7 +149,7 @@ input{
 }
 .form__field:focus ~ .form__label {
   position: absolute;
-  top: 160px;
+  top: 150px;
   left: 530px;
   display: block;
   transition: 0.2s;

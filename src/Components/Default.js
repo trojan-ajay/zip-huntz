@@ -3,14 +3,14 @@ import React from 'react'
 function Default(props) {
   return (
     <div>
-        <header class="header">
-				<div class="row">
-					<div class="col">
-							<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-								<div class="logo">ZIP-HUNTZ</div>
-								<nav class="main_nav">
-									<ul class="d-flex flex-row align-items-start justify-content-start">
-										<li class="active"><a href="index.html">Home</a></li>
+        <header className="header">
+				<div className="row">
+					<div className="col">
+							<div className="header_content_inner d-flex flex-row align-items-end justify-content-start">
+								<div className="logo">ZIP-HUNTZ</div>
+								<nav className="main_nav">
+									<ul className="d-flex flex-row align-items-start justify-content-start">
+										<li className="active"><a href="index.html">Home</a></li>
 										<li><a href="about.html">About us</a></li>
 										<li>Contact us : +91-9876543210</li>
 									</ul>
