@@ -48,8 +48,11 @@ input{
 }
 .button-17 {
   align-items: center;
+  position: absolute;
+  top: 50px;
+  right: 10px;
   appearance: none;
-  background-color: #fff;
+  background-color: #888888;
   border-radius: 24px;
   border-style: none;
   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
@@ -78,6 +81,17 @@ input{
   width: auto;
   will-change: transform,opacity;
   z-index: 0;
+}
+.help{
+  border: transparent;
+  background-color: transparent;
+  font-weight: bold;
+}
+.help:hover{
+  opacity: 0.5;
+}
+#aj{
+  visibility: hidden;
 }
 
 .button-17:hover {
@@ -114,49 +128,38 @@ input{
 .button-17:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
-.form__field {
-  font-family: inherit;
-  width: auto;
-  border: 0;
-  font-weight: bold;
-  border-bottom: 2px solid #ffffff;
-  outline: 0;
-  font-size: 1.3rem;
-  color: rgb(255, 255, 255);
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 0.2s;
-}
-.form__field::placeholder {
-  color: transparent;
-}
-.form__field:placeholder-shown ~ .form__label {
-  font-size: 1.3rem;
-  cursor: text;
-}
-.form__label {
+.form__input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+	margin: 0;
+  border-radius: 0.5rem;
+  background-color: white;
+  border: none;
   display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: #ffffff;
+  border: 2px solid black;
+  transition: all 0.3s;
 }
-.form__field:focus {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, black, black);
-  border-image-slice: 1;
-}
-.form__field:focus ~ .form__label {
+
+.form__label{
   position: absolute;
-  top: 150px;
-  left: 530px;
-  display: block;
-  transition: 0.2s;
-  font-size: 1.4rem;
-  color: black;
-  font-weight: 700;
+  left: 105px;
+  top:65px;
+  font-weight: bold;
+  font-size: large;
 }
-.form__field:required, .form__field:invalid {
-  box-shadow: none;
+.tog{
+  visibility:hidden;
+}
+
+.bgform{
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 500px;
+  height: 300px;
+  margin-left: 350px;
+  position:absolute;
+  top: 250px;
+  padding: 100px;
+  background-color: white;
 }

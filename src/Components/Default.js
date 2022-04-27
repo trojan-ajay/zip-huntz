@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+
 
 function Default(props) {
+
   return (
     <div>
         <header className="header">
@@ -10,8 +12,8 @@ function Default(props) {
 								<div className="logo">ZIP-HUNTZ</div>
 								<nav className="main_nav">
 									<ul className="d-flex flex-row align-items-start justify-content-start">
-										<li className="active"><a href="index.html">Home</a></li>
-										<li><a href="about.html">About us</a></li>
+										<li className="active"><button className='help'>Home</button></li>
+										<li><button className='help'>Help</button></li>
 										<li>Contact us : +91-9876543210</li>
 									</ul>
 								</nav>
