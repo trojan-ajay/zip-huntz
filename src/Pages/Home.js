@@ -1,18 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Default from "../Components/Default";
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
 function Home() {
+  const[user,setUser]=useState('')
   useEffect(() => {
-    $(".form__input").focus(function () {
-      $(this).attr("placeholder", " ");
-      $(".form__label").css("visibility", "visible");
-    });
-    $(".form__input").focusout(function () {
-      $(this).attr("placeholder", "zip-code");
-      $(".form__label").css("visibility", "hidden");
-    });
+    $("input").focus()
+    $(".refresh").click(()=>{
+      window.location.reload()
+    })
     $("#aj").dialog({
       title: "Help",
       modal: true,
@@ -22,9 +19,6 @@ function Home() {
       $("#aj").dialog("open");
     });
   }, []);
-  function handler(e) {
-    e.preventDefault();
-  }
   return (
     <Default>
       <div className="container-fluid mt-2 cg " align="center">
@@ -36,11 +30,11 @@ function Home() {
                   <div className="col-sm hg p-2 mb-1 ">ZIP-HUNTZ</div>
                 </div>
                 <div className="row spacex ">
-                  <div className="col-sm d-flex justify-content-end">- Enter the appropiate pin-code</div>
+                  <div className="col-sm d-flex justify-content-end">- Enter the pin the Hunt place</div>
                 </div>
                 <div class="row">
                   <div class="col-sm">
-                    <input type="text" placeholder="Enter zip here" />
+                    <input type="text" placeholder="Enter zip here" value={} />
                   </div>
                 </div>
                 <div class="row">
@@ -55,6 +49,7 @@ function Home() {
             </div>
           </div>
         </div>
+        <div id="aj">hello</div>
       </div>
     </Default>
   );

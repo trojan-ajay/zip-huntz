@@ -9,13 +9,13 @@ function Default(props) {
           ZIP-HUNTZ
         </div>
         <div class="col-sm-2 b" align="left">
-          <button className="button">Home</button>
+          <button className="refresh">Home</button>
         </div>
         <div class="col-sm-3 b" align="left">
-          <button className="button">Help</button>
+          <button className="help">Help</button>
         </div>
         <div class="col-sm-3 b" align="left">
-          <button className="button">contact-us</button>
+          <button className="contact">contact-us</button>
         </div>
       </div>
     </div>
