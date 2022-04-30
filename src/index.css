@@ -4,6 +4,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .App {
   text-align: center;
 }
@@ -76,6 +81,22 @@ input:focus {
   border-color: gray;
   box-shadow: 0 0 10px #676767;
 }
+.wrong{
+  border: 1px solid red;
+}
+.wrong:focus{
+  outline: none !important;
+  border-color: red;
+  box-shadow: 0 0 5px red;
+}
+.right{
+  border: 1px solid rgb(0, 255, 0) ;
+}
+.right:focus{
+  outline: none !important;
+  border-color: rgb(0, 255, 0);
+  box-shadow: 0 0 5px rgb(0, 255, 0);
+}
 input::placeholder{
   text-align: center;
   color:#888888;
@@ -86,4 +107,7 @@ input::placeholder{
   font-weight: 900;
   letter-spacing: 10px;
   background-color: #888888;
+}
+.smallwrong{
+  color: red;
 }

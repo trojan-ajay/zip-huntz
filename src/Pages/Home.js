@@ -4,7 +4,8 @@ import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
 function Home() {
-  const[user,setUser]=useState('')
+  const[warnings,setWarnings]=useState('');
+  const[user,setUser]=useState("");
   useEffect(() => {
     $("input").focus()
     $(".refresh").click(()=>{
@@ -19,6 +20,47 @@ function Home() {
       $("#aj").dialog("open");
     });
   }, []);
+  const handler=(e)=>{
+    setUser(e.target.value)
+  }
+  const validate=()=>{
+    if($("input").val()){
+      var zip=$("input").val();
+      var regx=/^[1-9]{1}[0-9]{5}$/
+      if(regx.test(zip)){
+        $("input").addClass("right")
+        setWarnings("")
+      }
+      else{
+        $("input").removeClass("right")
+        $("input").addClass("wrong")
+        if(zip.length<6){
+          $("small").addClass("smallwrong")
+          setWarnings("pin too short")
+        }
+        else{
+          if(zip.length==6){
+            $("small").addClass("smallwrong")
+            setWarnings("invalid pin")
+          }
+          else{
+            $("small").addClass("smallwrong")
+          setWarnings("pin is large")
+        }
+        }
+      }
+    }
+    else{
+      $("input").removeClass("wrong")
+      $("small").removeClass("smallwrong")
+      setWarnings("")
+    }
+  }
+  const clickHandler=()=>{
+    if(warnings){
+      alert(warnings)
+    }
+  }
   return (
     <Default>
       <div className="container-fluid mt-2 cg " align="center">
@@ -30,11 +72,12 @@ function Home() {
                   <div className="col-sm hg p-2 mb-1 ">ZIP-HUNTZ</div>
                 </div>
                 <div className="row spacex ">
-                  <div className="col-sm d-flex justify-content-end">- Enter the pin the Hunt place</div>
+                  <div className="col-sm d-flex justify-content-end">- Enter the pin then Hunt the place</div>
                 </div>
                 <div class="row">
                   <div class="col-sm">
-                    <input type="text" placeholder="Enter zip here" value={} />
+                    <input type="number" className="col-sm" placeholder="Enter zip here" id={user} onChange={(e)=>{handler(e);validate()}}/><br></br>
+                    <small className="col-sm offset-8 mt-3 ">{warnings}</small>
                   </div>
                 </div>
                 <div class="row">
@@ -42,7 +85,7 @@ function Home() {
                 </div>
                 <div class="row" align="center">
                   <div class="col-sm">
-                    <button className="search">click</button>
+                    <button className="search" onClick={clickHandler}>click</button>
                   </div>
                 </div>
               </div>
