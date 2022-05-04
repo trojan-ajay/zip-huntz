@@ -90,12 +90,12 @@ input:focus {
   box-shadow: 0 0 5px red;
 }
 .right{
-  border: 1px solid rgb(0, 255, 0) ;
+  border: 1px solid green ;
 }
 .right:focus{
   outline: none !important;
-  border-color: rgb(0, 255, 0);
-  box-shadow: 0 0 5px rgb(0, 255, 0);
+  border-color: green;
+  box-shadow: 0 0 5px green;
 }
 input::placeholder{
   text-align: center;
@@ -110,4 +110,7 @@ input::placeholder{
 }
 .smallwrong{
   color: red;
+}
+. myTitleClass .ui-dialog-titlebar {
+  background:red;
 }

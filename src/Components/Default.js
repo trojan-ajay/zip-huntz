@@ -3,18 +3,18 @@ import React from "react";
 function Default(props) {
   return (
     <div>
-    <div class="container-fluid">
-      <div class="row p-2 bg">
-        <div class="col-sm-4 logo" align="left">
+    <div className="container-fluid">
+      <div className="row p-2 bg">
+        <div className="col-sm-4 logo" align="left">
           ZIP-HUNTZ
         </div>
-        <div class="col-sm-2 b" align="left">
+        <div className="col-sm-2 b" align="left">
           <button className="refresh">Home</button>
         </div>
-        <div class="col-sm-3 b" align="left">
+        <div className="col-sm-3 b" align="left">
           <button className="help">Help</button>
         </div>
-        <div class="col-sm-3 b" align="left">
+        <div className="col-sm-3 b" align="left">
           <button className="contact">contact-us</button>
         </div>
       </div>
