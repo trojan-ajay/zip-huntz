@@ -111,6 +111,6 @@ input::placeholder{
 .smallwrong{
   color: red;
 }
-. myTitleClass .ui-dialog-titlebar {
+.myTitleClass .ui-dialog-titlebar {
   background:red;
 }
