@@ -46,7 +46,7 @@ function Home() {
   const validate = () => {
     if ($("input").val()) {
       var zip = $("input").val();
-      var regx = /^[1-9]{1}[0-9]{5}$/;
+      var regx = /^[6]{1}[0-9]{5}$/;
       if (regx.test(zip)) {
         $("input").addClass("right");
         setWarnings("");
